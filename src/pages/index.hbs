@@ -1,0 +1,242 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <title>My Handlebars Template</title>
+  <link rel="canonical" href="/">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+      }
+    </style>
+  </noscript>
+
+  <style amp-custom>
+    body {
+      background-color: #d4e6ff;
+      color: #1A202C;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      line-height: 1.6rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      max-width: 768px;
+      gap: 40px;
+      margin: 0 auto;
+      min-height: calc(100vh - 80px);
+      padding: 40px;
+    }
+
+    #container * {
+      transition: all 0.2s ease-in-out;
+    }
+
+    #header {
+      text-align: center;
+    }
+
+    #links {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      flex-grow: 1;
+    }
+
+    #name {
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+
+    #footer {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    #footer a {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .link-box {
+      padding: 16px;
+      border-radius: 5px;
+      background-color: #fff;
+      ;
+    }
+
+    .link-box-inner {
+      display: flex;
+      align-items: center;
+      min-height: 50px;
+    }
+
+    .link-box-left {
+      flex: 1 0;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .link-box-logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    .link-box-name {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .link-box-link {
+      text-decoration: none;
+      display: inline-block;
+      padding: 2px 14px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      opacity: 0.8;
+    }
+
+    .link-box:hover {
+      transform: scale(1.08);
+    }
+
+    .link-box:hover .link-box-link {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 768px) {
+      #container {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .link-box-logo {
+        width: 35px;
+        height: 35px;
+      }
+
+      .link-box-inner {
+        min-height: 35px;
+      }
+
+      .link-box-name {
+        font-size: 0.9rem;
+      }
+
+      .link-box-left {
+        gap: 10px;
+      }
+
+      .link-box-link {
+        font-size: 0.8rem;
+        padding: 0 10px;
+      }
+
+      .link-box:hover {
+        transform: scale(1.06);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="logo">
+        <amp-img src="{{ logo }}" width="140" height="140" layout="responsive"></amp-img>
+      </div>
+      <h1 id="name">{{ name }}</h1>
+    </div>
+
+    <div id="links">
+      {{#each links}}
+      {{> components/LinkBox link=this}}
+      {{/each}}
+    </div>
+
+    <footer id="footer">
+      Made by <a href="https://tampil.online" target="_blank">Tampil Online</a>
+    </footer>
+  </div>
+</body>
+
+</html>

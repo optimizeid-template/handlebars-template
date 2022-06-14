@@ -1,0 +1,19 @@
+<a href="{{url}}">
+  <div class="link-box">
+    <div class="link-box-inner">
+      <div class="link-box-left">
+        {{#if image}}
+        <div class="link-box-logo">
+          <amp-img src="{{ image }}" width="50" height="50" layout="responsive"></amp-img>
+        </div>
+        {{/if}}
+        <div class="link-box-name" style="color: {{color}}">
+          {{ name }}
+        </div>
+      </div>
+      <div>
+        <div class="link-box-link" style="background-color: {{color}}">Lihat</div>
+      </div>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,9 @@
+{
+  "logo": { "ui:options": { "aspect": 1 } },
+  "links": {
+    "items": {
+      "ui:options": { "column": 2 },
+      "logo": { "ui:options": { "aspect": 1 } }
+    }
+  }
+}

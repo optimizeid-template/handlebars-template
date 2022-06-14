@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "required": ["logo", "name"],
+  "properties": {
+    "logo": {
+      "type": "string",
+      "title": "Logo",
+      "format": "imageUpload"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "links": {
+      "type": "array",
+      "title": "Links",
+      "default": [],
+      "items": {
+        "type": "object",
+        "title": "Link",
+        "required": ["name", "url", "color"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "url": {
+            "type": "string",
+            "title": "URL"
+          },
+          "logo": {
+            "type": "string",
+            "title": "Logo",
+            "format": "imageUpload",
+            "default": ""
+          },
+          "color": {
+            "type": "string",
+            "title": "Color (for Other Type)",
+            "format": "color",
+            "default": "#000000"
+          }
+        }
+      }
+    }
+  }
+}
